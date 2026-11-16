@@ -1,0 +1,85 @@
+cv:
+  name: Milin Patel
+  label: Research Associate and PhD Candidate
+  email: milinp101996@gmail.com
+  location: Benningen, Germany
+
+  social_networks:
+    - network: LinkedIn
+      username: milinpatel1996
+    - network: GitHub
+      username: milinpatel07
+    - network: ORCID
+      username: 0000-0002-8357-6018
+
+  sections:
+    Experience:
+      - company: IFM – Institute for Driver Assistance and Connected Mobility, Hochschule Kempten
+        position: Research Associate, Team Safety
+        location: Benningen, Germany
+        start_date: 2021-09
+        end_date: present
+        highlights:
+          - Reasonably foreseeable misuse of automated driving functions by the driver.
+          - Simulation-based analysis of radar, camera and LiDAR behaviour under different operating conditions.
+          - Uncertainty evaluation for AI-based LiDAR object detection.
+          - Assurance arguments that combine safety and cybersecurity for AI-based perception.
+          - Supervision of Bachelor's and Master's theses and internships.
+      - company: Hochschule Kempten
+        position: Student Researcher
+        location: Kempten, Germany
+        start_date: 2020-11
+        end_date: 2021-05
+        highlights:
+          - Modelling and simulation-based verification and validation of a transverse guidance assist system.
+      - company: Goldensun Cosmos Machinery Pvt. Ltd.
+        position: Development Engineer
+        location: Vadodara, India
+        start_date: 2018-08
+        end_date: 2019-08
+        highlights:
+          - Supervisory control and data acquisition (SCADA) system for real-time monitoring and automatic report generation of industrial machines.
+          - Human–machine interface (HMI) for Schneider Electric programmable logic controllers (PLCs), for data acquisition.
+
+    Education:
+      - institution: Hochschule Kempten
+        area: Doctoral candidate, Promotionszentrum Transformation und nachhaltige Entwicklung
+        studyType: PhD
+        start_date: 2026-03
+        end_date: present
+      - institution: Hochschule Furtwangen
+        area: Smart Systems
+        studyType: M.Sc.
+        start_date: 2019-10
+        end_date: 2021-03
+      - institution: Dharmsinh Desai University
+        area: Instrumentation and Control Engineering
+        studyType: B.Tech.
+        start_date: 2014
+        end_date: 2018
+
+    Service:
+      - label: Peer review
+        details: Nine reviews, verified on ORCID, for Control Engineering Practice, IEEE Transactions on Software Engineering, Journal of Experimental & Theoretical Artificial Intelligence, and Reliability Engineering & System Safety.
+      - label: Organisation
+        details: Co-organiser of the ETI 2026 Science Talk at IFM, Benningen.
+
+    Skills:
+      - name: Simulation and testing
+        keywords: [MATLAB/Simulink, IPG CarMaker, CARLA, driving simulator]
+      - name: Standards and methods
+        keywords: [ISO 26262, ISO 21448 (SOTIF), ISO/SAE 21434, ISO/PAS 8800, GSN assurance cases, HARA, TARA, STPA]
+      - name: Software and data
+        keywords: [Python, PyTorch, scikit-learn, Jupyter, Docker, LaTeX, C/C++, ROS]
+      - name: Automation
+        keywords: [SCADA, PLC programming]
+
+    Languages:
+      - language: Gujarati
+        fluency: Native
+      - language: Hindi
+        fluency: Native
+      - language: English
+        fluency: Professional working proficiency
+      - language: German
+        fluency: Limited working proficiency

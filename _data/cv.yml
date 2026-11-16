@@ -14,7 +14,7 @@ cv:
 
   sections:
     Experience:
-      - company: IFM – Institute for Driver Assistance and Connected Mobility, Hochschule Kempten
+      - company: IFM – Institute for Driver Assistance and Connected Mobility, Kempten University of Applied Sciences
         position: Research Associate, Team Safety
         location: Benningen, Germany
         start_date: 2021-09
@@ -25,7 +25,7 @@ cv:
           - Uncertainty evaluation for AI-based LiDAR object detection.
           - Assurance arguments that combine safety and cybersecurity for AI-based perception.
           - Supervision of Bachelor's and Master's theses and internships.
-      - company: Hochschule Kempten
+      - company: Kempten University of Applied Sciences
         position: Student Researcher
         location: Kempten, Germany
         start_date: 2020-11
@@ -42,7 +42,7 @@ cv:
           - Human–machine interface (HMI) for Schneider Electric programmable logic controllers (PLCs), for data acquisition.
 
     Education:
-      - institution: Hochschule Kempten
+      - institution: Kempten University of Applied Sciences
         area: Doctoral candidate, Promotionszentrum Transformation und nachhaltige Entwicklung
         studyType: PhD
         start_date: 2026-03

@@ -18,43 +18,31 @@ latest_posts:
 
 <style>
 .post-header{display:none}
-.hero-img{width:100%;border-radius:12px;display:block}
-.hero-cap{font-size:.9rem;opacity:.75;margin:.6rem 0 1.6rem}
-.stage{display:grid;grid-template-columns:9rem 1fr;gap:.2rem 1.2rem;padding:.9rem 0;border-top:1px solid var(--global-divider-color)}
+.hero-img{width:100%;border-radius:12px;display:block;margin:0 0 1.6rem}
+.stage{display:grid;grid-template-columns:11rem 1fr;gap:.2rem 1.2rem;padding:.9rem 0;border-top:1px solid var(--global-divider-color)}
 .stage:last-of-type{border-bottom:1px solid var(--global-divider-color)}
 .stage b{font-weight:500}
 .stage p{margin:0}
 .stage .q{font-weight:500;margin-bottom:.3rem}
-.stage .ref{font-size:.85rem;opacity:.7;margin-top:.3rem}
-.keypub{margin:0 0 1.1rem}
-.keypub .meta{font-size:.85rem;opacity:.7}
+.stage .ref{font-size:.85rem;margin-top:.4rem}
 @media (max-width:576px){.stage{grid-template-columns:1fr}}
 </style>
 
-<img class="hero-img" src="{{ '/assets/img/hero.svg' | relative_url }}" alt="Animated LiDAR scene. A vehicle's AI detects a pedestrian; when the detection becomes uncertain, a runtime monitor switches from nominal to degraded.">
-<p class="hero-cap">The animation shows the problem I work on. The vehicle's AI detects a pedestrian. When that detection becomes uncertain, a runtime monitor reports that the system is no longer operating as intended.</p>
+<img class="hero-img" src="{{ '/assets/img/hero.svg' | relative_url }}" alt="Animated LiDAR scene. The perception of the ego vehicle detects a pedestrian. When the detection becomes uncertain, a runtime monitor changes its state from nominal to degraded.">
 
 **Research Associate & PhD Candidate \| Safety, Cybersecurity & AI for Automated Driving**<br>
 _Prodigy in an infant state on career progression path._
 
-A vehicle that drives itself has to recognise people, other vehicles and the road. It does this with AI models trained on recorded data. Nobody writes down in advance how such a model must behave, so engineers cannot check it line by line against a specification. The standards for vehicle safety assume exactly that kind of check. My research works out how to show that an AI-based perception system is safe and secure enough to be released, and that it stays so on the road.
+An automated driving system uses AI-based perception to detect pedestrians, vehicles and lane markings from sensor data. A perception model learns its behaviour from training data. A written specification does not define that behaviour. Safety standards for road vehicles verify a system against its specification, so they cover an AI-based perception component only in part. I develop methods that produce the evidence for the uncovered part: measurements of perception performance under adverse conditions, and an assurance case (a structured argument, supported by evidence, that a system is acceptably safe) that combines safety claims and cybersecurity claims.
 
-I work at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm) of Kempten University of Applied Sciences in Germany, as a Research Associate since 2021 and as a PhD candidate. I came to this field through control engineering: a degree in Instrumentation and Control Engineering in India, a first job building a monitoring system for quality checks in the machine tool industry, and a Master's in Smart Systems in Germany. My master's thesis on testing automated lane-keeping in simulation brought me to Kempten.
+I am a Research Associate (since 2021) and PhD candidate at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm) of Kempten University of Applied Sciences, Germany. I hold a B.Tech. in Instrumentation and Control Engineering and an M.Sc. in Smart Systems. Before research, I developed a supervisory control and data acquisition (SCADA) system for quality checks in the machine tool industry. My master's thesis addressed scenario-based verification and validation of highly automated lane keeping.
 
 ## Research
 
-I test AI-based perception in simulation, under conditions that are rare or dangerous to recreate on a real road, and I turn the results into evidence that a safety assessor can check. The work follows a vehicle's AI from development to operation.
+The research follows an AI-based perception component through the phases of its lifecycle. Each phase poses a question about the evidence for safety and cybersecurity.
 
-<div class="stage"><b>Before release</b><div><p class="q">Does the AI still detect pedestrians in rain, fog or darkness?</p><p>I build simulated sensor data for such conditions and measure how uncertain the AI is about each detection. Where several AI models disagree, the detection is likely wrong.</p><p class="ref">VEHITS 2024 and 2026, Springer 2026</p></div></div>
-<div class="stage"><b>At release</b><div><p class="q">Can one argument show that the system is both safe and secure?</p><p>Heavy rain and a sensor attack can hide the same pedestrian. Safety standards cover the rain and security standards cover the attack, but neither assigns the failure that both can cause. I build one argument that covers both and shows where the gaps remain.</p><p class="ref">SAFECOMP 2026</p></div></div>
-<div class="stage"><b>After release</b><div><p class="q">Does the evidence still hold on the road and after each software update?</p><p>On the road, the vehicle sees a sudden drop in detection quality but not its cause. Runtime monitoring, as in the animation above, is one part of the answer.</p><p class="ref">SAFECOMP 2026, position paper</p></div></div>
+<div class="stage"><b>Development and testing</b><div><p class="q">Does the perception model meet its performance target under adverse weather conditions?</p><p>I generate LiDAR point cloud data in simulation for defined weather conditions. An ensemble of object detection models then evaluates the uncertainty of each detection. Disagreement between the models of the ensemble separates incorrect detections from correct ones and identifies the weather conditions that cause them.</p><p class="ref">Publications: <a href="https://doi.org/10.5220/0014967200004030">uncertainty evaluation</a>, <a href="https://doi.org/10.1007/978-3-032-23187-1_10">uncertainty representation</a>, <a href="https://doi.org/10.5220/0012707300003702">performance evaluation in simulation</a></p></div></div>
+<div class="stage"><b>Release for use on public roads</b><div><p class="q">Do the safety claims and the cybersecurity claims form a consistent assurance case?</p><p>Reduced LiDAR point density on an object can result from heavy rain or from a spoofing attack. ISO 21448 treats the rain as a triggering condition and excludes attacks. ISO/SAE 21434 treats the attack as a threat scenario and does not reference ISO 21448. Neither standard allocates a failure that both causes can produce. I extend the assurance argument pattern of ISO/PAS 8800 with the claims of the other standards and identify where this allocation is missing.</p><p class="ref">Publication: <a href="https://doi.org/10.1007/978-3-032-35506-5_55">assurance argument pattern</a> (<a href="https://github.com/milinpatel07/Assurance-Gaps-in-an-Integrated-Safety-and-Cybersecurity-Case">code</a>)</p></div></div>
+<div class="stage"><b>Operation and updates</b><div><p class="q">Does the evidence remain valid in operation and after an update of the perception model?</p><p>In operation, no ground truth is available. An anomaly in the perception output reaches the vehicle without a label for its cause, which can be a performance insufficiency (ISO 21448) or an attack (ISO/SAE 21434). My position paper states this gap at the level of the clauses of the standards and sets requirements for a method that resolves it.</p><p class="ref">Publication: position paper at SAFECOMP 2026, listed under <a href="{{ '/publications/' | relative_url }}">publications</a></p></div></div>
 
-The questions sit between four ISO standards: ISO 26262 for faults in hardware and software, ISO 21448 for hazards that arise without any fault (also called SOTIF), ISO/SAE 21434 for cybersecurity, and ISO/PAS 8800 for AI in road vehicles.
-
-## Key publications
-
-<div class="keypub"><a href="https://doi.org/10.1007/978-3-032-35506-5_55">Integrating Cybersecurity Into the AI Safety Assurance Argument</a><br>One argument for the safety and the security of an AI-based LiDAR detector, and the failures that no standard assigns to either side.<br><span class="meta">SAFECOMP 2026 Workshops (WAISE), Springer · <a href="https://github.com/milinpatel07/Assurance-Gaps-in-an-Integrated-Safety-and-Cybersecurity-Case">code</a></span></div>
-<div class="keypub"><a href="https://doi.org/10.5220/0014967200004030">Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis</a><br>Uses the disagreement between several detectors to find detections that are likely wrong, and the weather conditions that cause them.<br><span class="meta">VEHITS 2026 · <a href="https://github.com/milinpatel07/SOTIF_Uncertainty_Evaluation_Lidar_Object_Detection">code</a></span></div>
-<div class="keypub"><a href="https://doi.org/10.4271/2025-01-5030">A Systematic Literature Review on Safety of the Intended Functionality for Automated Driving Systems</a><br>What published research says about hazards that arise without any fault, and where it leaves gaps.<br><span class="meta">SAE Technical Paper, 2025, open access</span></div>
-
-[All publications](/publications/)
+The work refers to ISO 26262 (functional safety), ISO 21448 (safety of the intended functionality, SOTIF), ISO/SAE 21434 (cybersecurity engineering) and ISO/PAS 8800 (safety and artificial intelligence).

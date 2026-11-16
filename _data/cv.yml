@@ -58,11 +58,9 @@ cv:
         start_date: 2014
         end_date: 2018
 
-    Service:
-      - label: Peer review
-        details: Nine reviews, verified on ORCID, for Control Engineering Practice, IEEE Transactions on Software Engineering, Journal of Experimental & Theoretical Artificial Intelligence, and Reliability Engineering & System Safety.
-      - label: Organisation
-        details: Co-organiser of the ETI 2026 Science Talk at IFM, Benningen.
+    Peer review:
+      - label: Journals
+        details: Control Engineering Practice; IEEE Transactions on Software Engineering; Journal of Experimental & Theoretical Artificial Intelligence; Reliability Engineering & System Safety. The reviews are verified on ORCID.
 
     Skills:
       - name: Simulation and testing

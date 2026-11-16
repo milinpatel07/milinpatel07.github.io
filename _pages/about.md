@@ -48,6 +48,9 @@ latest_posts:
 .lc-nav{display:flex;gap:.6rem;margin-top:1rem}
 .lc-nav button{font:inherit;font-size:.85rem;color:#e8eef8 !important;background:#12203f;border:1px solid #3a4f85;border-radius:999px;padding:.3rem .9rem;cursor:pointer}
 .lc-nav button:hover{border-color:#5ad1f0}
+.fields{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1rem}
+.fields a{font-size:.92rem;padding:.3rem .9rem;border-radius:999px;border:1px solid var(--global-divider-color);color:var(--global-text-color);transition:background-color .2s,color .2s,border-color .2s}
+.fields a:hover{background:var(--global-theme-color);border-color:var(--global-theme-color);color:var(--global-bg-color);text-decoration:none}
 .social .contact-icons a i,.social .contact-icons a svg{font-size:1.9rem}
 @media (max-width:760px){.lc{grid-template-columns:1fr;padding:1rem}.lc-ring{max-width:300px;margin:1.6rem auto}.lc .lc-node span.l{width:4rem;font-size:.7rem}.lc-panel{min-height:0}}
 @media (prefers-reduced-motion:reduce){.lc-arm{transition:none}.lc-panel.swap{animation:none}}
@@ -55,11 +58,17 @@ latest_posts:
 
 _Prodigy in an infant state on career progression path._
 
-Engineer and researcher at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm), Kempten University of Applied Sciences, Germany. Research field: safety and cybersecurity of artificial intelligence (AI) in automated driving.
+Engineer and researcher at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm), Kempten University of Applied Sciences, Germany. Current research: safety and cybersecurity of artificial intelligence (AI) in automated driving.
 
 An automated vehicle drives parts of a journey without the driver. Perception software in the vehicle recognises people, other vehicles and the road from sensor data. Perception software uses AI, and AI makes errors, for example in heavy rain or after manipulation of a sensor.
 
 The research develops methods for the detection of perception errors, before the release of a vehicle and during operation, and for the demonstration of an acceptable remaining risk to an independent assessor. The methods are simulation-based tests, performance measurements, and assurance cases with safety claims and cybersecurity claims.
+
+## Fields of experience
+
+<p class="fields"><a href="{{ '/projects/' | relative_url }}#driving">Automated driving</a><a href="{{ '/projects/' | relative_url }}#ai">AI and machine learning</a><a href="{{ '/projects/' | relative_url }}#safety">Safety and cybersecurity</a><a href="{{ '/projects/' | relative_url }}#simulation">Simulation</a><a href="{{ '/projects/' | relative_url }}#robotics">Robotics</a><a href="{{ '/projects/' | relative_url }}#automation">Industrial automation</a><a href="{{ '/projects/' | relative_url }}#sensors">Sensors and electronics</a><a href="{{ '/projects/' | relative_url }}#teaching">Teaching</a><a href="{{ '/projects/' | relative_url }}#tools">Software tools</a></p>
+
+Experience covers research, teaching, engineering projects and industry work. Each field opens the matching entries in the [portfolio]({{ '/projects/' | relative_url }}).
 
 ## Research along the lifecycle of an AI component
 
@@ -79,7 +88,7 @@ The figure shows the lifecycle phases of an AI component, from concept to update
 
 <noscript><p>The phases are: concept and requirements, data and design, verification and validation, release, operation, and updates. The <a href="{{ '/publications/' | relative_url }}">publications</a> page lists the work for each phase.</p></noscript>
 
-Teaching: supervision of bachelor's and master's theses, and workshops for students from European countries in the Erasmus+ programme. The [projects]({{ '/projects/' | relative_url }}) page shows a school workshop and interactive explanations of the research.
+Teaching: supervision of bachelor's and master's theses, and workshops for students from European countries in the Erasmus+ programme. The [portfolio]({{ '/projects/' | relative_url }}) lists the teaching material.
 
 ## Background
 

@@ -63,7 +63,7 @@ The research develops methods for the detection of perception errors, before the
 
 ## Research along the lifecycle of an AI component
 
-The figure shows the lifecycle phases of an AI component, from concept to updates. Each phase raises a safety and cybersecurity question. Select a phase to read the question, the research on the question, and the result.
+The figure shows the lifecycle phases of an AI component, from concept to updates. Select a phase to read the research topic and the result for the phase.
 
 <div class="lc" id="lc">
   <div class="lc-ring">
@@ -88,27 +88,27 @@ Research Associate at IFM since 2021 and PhD candidate. B.Tech. in Instrumentati
 <script>
 (function(){
   var D="https://doi.org/", P=[
-   {t:"Concept and requirements", q:"What can go wrong?", pos:[50,12,"top"],
+   {t:"Concept and requirements", q:"Hazards from misuse and from functional limits", pos:[50,12,"top"],
     w:"Hazard analysis precedes design. Reasonably foreseeable misuse of an automated driving function by the driver is one hazard source. The limits of the function are a second hazard source. The safety of the intended functionality (SOTIF) covers hazards without a fault.",
     r:"A systematic literature review identifies research gaps and compares the methods in support of SOTIF. A simulation study defines test requirements and evaluation criteria for misuse scenarios.",
     l:[["Systematic literature review",D+"10.4271/2025-01-5030"],["Mitigation of foreseeable misuse",D+"10.47953/sae-pp-00371"]]},
-   {t:"Data and design", q:"Are the data fit for purpose?", pos:[79,30,"right"],
+   {t:"Data and design", q:"Simulated sensor data for defined weather conditions", pos:[79,30,"right"],
     w:"Training data and test data determine the behaviour of an AI-based object detector. Simulation generates LiDAR (laser-based distance sensor) data with defined, repeatable weather conditions.",
     r:"A simulated LiDAR dataset with 21 weather conditions and public code.",
     l:[["Performance evaluation in simulation",D+"10.5220/0012707300003702"],["Code","https://github.com/milinpatel07/SOTIF-PCOD"]]},
-   {t:"Verification and validation", q:"Are the targets met?", pos:[79,70,"right"],
+   {t:"Verification and validation", q:"Uncertainty of each detection as test evidence", pos:[79,70,"right"],
     w:"Simulation tests automated driving functions. An ensemble of AI-based object detectors provides an uncertainty value for each detection.",
     r:"Disagreement within the ensemble separates incorrect detections from correct detections. A statistical test checks the validity of a performance target in heavy rain.",
     l:[["Uncertainty evaluation",D+"10.5220/0014967200004030"],["Uncertainty representation",D+"10.1007/978-3-032-23187-1_10"],["Testing of foreseeable misuse",D+"10.1007/978-981-99-3043-2_15"],["Trajectory planning",D+"10.1109/ICECCME52200.2021.9591044"],["Explanation of the statistical test","https://milinpatel07.github.io/lidar-performance-target-applicability/story.html"]]},
-   {t:"Release", q:"Is the case complete?", pos:[50,88,"bottom"],
+   {t:"Release", q:"Safety claims and cybersecurity claims in one assurance case", pos:[50,88,"bottom"],
     w:"An assurance case is a structured argument, supported by evidence, for the acceptable safety of a system. The research combines the safety claims and the cybersecurity claims for an AI-based perception component in one assurance case.",
     r:"At the verification and validation goal, the evidence types of the standards use different measurement scales. No standard prescribes a combination rule.",
     l:[["Assurance argument pattern",D+"10.1007/978-3-032-35506-5_55"],["Assurance case explorer","https://milinpatel07.github.io/Assurance-Gaps-in-an-Integrated-Safety-and-Cybersecurity-Case/"]]},
-   {t:"Operation", q:"Does it hold in operation?", pos:[21,70,"left"],
+   {t:"Operation", q:"Perception anomalies without a known cause", pos:[21,70,"left"],
     w:"Operation provides no ground truth. An anomaly in the perception output carries no label for the cause. The cause is a performance insufficiency or an attack.",
     r:"A position paper shows the missing allocation of an anomaly to a cause in the clauses of the standards and sets requirements for a resolution method.",
     l:[["Position paper, listed under publications","{{ '/publications/' | relative_url }}"]]},
-   {t:"Updates", q:"Does it hold after updates?", pos:[21,30,"left"],
+   {t:"Updates", q:"Validity of evidence after an update", pos:[21,30,"left"],
     w:"An update of an AI component can invalidate evidence from the earlier version. The validity of evidence after an update is part of the current research.",
     r:"No publication yet.",
     l:[]}

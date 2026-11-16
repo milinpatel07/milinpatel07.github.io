@@ -55,15 +55,15 @@ latest_posts:
 
 _Prodigy in an infant state on career progression path._
 
-I am an engineer and researcher at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm) of Kempten University of Applied Sciences, Germany. I work on the safety and cybersecurity of artificial intelligence (AI) in automated driving.
+Engineer and researcher at the [Institute for Driver Assistance and Connected Mobility (IFM)](https://www.hs-kempten.de/ifm), Kempten University of Applied Sciences, Germany. Research field: safety and cybersecurity of artificial intelligence (AI) in automated driving.
 
-Some vehicles can drive parts of a journey without the driver. Software in the vehicle has to recognise people, other vehicles and the road from sensor data. The software uses AI and can make errors, for example in heavy rain or when someone manipulates a sensor.
+An automated vehicle drives parts of a journey without the driver. Perception software in the vehicle recognises people, other vehicles and the road from sensor data. Perception software uses AI, and AI makes errors, for example in heavy rain or after manipulation of a sensor.
 
-I develop methods to find errors of AI-based perception before the release of a vehicle and during its operation, and to demonstrate to an independent assessor that the remaining risk is acceptable. The methods are simulation-based tests, performance measurements, and assurance cases that combine safety and cybersecurity.
+The research develops methods for the detection of perception errors, before the release of a vehicle and during operation, and for the demonstration of an acceptable remaining risk to an independent assessor. The methods are simulation-based tests, performance measurements, and assurance cases with safety claims and cybersecurity claims.
 
-## My work along the lifecycle of an AI component
+## Research along the lifecycle of an AI component
 
-An AI component passes through the phases shown in the figure, from concept to updates. Each phase raises a question about safety and cybersecurity. Select a phase to read the question, my work on it, and the result.
+The figure shows the lifecycle phases of an AI component, from concept to updates. Each phase raises a safety and cybersecurity question. Select a phase to read the question, the research on the question, and the result.
 
 <div class="lc" id="lc">
   <div class="lc-ring">
@@ -79,37 +79,37 @@ An AI component passes through the phases shown in the figure, from concept to u
 
 <noscript><p>The phases are: concept and requirements, data and design, verification and validation, release, operation, and updates. The <a href="{{ '/publications/' | relative_url }}">publications</a> page lists the work for each phase.</p></noscript>
 
-Besides this research, I supervise bachelor's and master's theses and conduct workshops for students from European countries in the Erasmus+ programme. The [projects]({{ '/projects/' | relative_url }}) page shows a school workshop and two interactive explanations of my research.
+Teaching: supervision of bachelor's and master's theses, and workshops for students from European countries in the Erasmus+ programme. The [projects]({{ '/projects/' | relative_url }}) page shows a school workshop and interactive explanations of the research.
 
 ## Background
 
-I have been a Research Associate at IFM since 2021 and am a PhD candidate. I hold a B.Tech. in Instrumentation and Control Engineering (India) and an M.Sc. in Smart Systems (Germany). Before research, I developed a supervisory control and data acquisition (SCADA) system for quality checks in the machine tool industry. I review manuscripts for scientific journals and conferences. The [CV]({{ '/cv/' | relative_url }}) gives the details.
+Research Associate at IFM since 2021 and PhD candidate. B.Tech. in Instrumentation and Control Engineering (India) and M.Sc. in Smart Systems (Germany). Industry experience: development of a supervisory control and data acquisition (SCADA) system for quality checks in the machine tool industry. Reviewer for scientific journals and conferences. The [CV]({{ '/cv/' | relative_url }}) gives dates and details.
 
 <script>
 (function(){
   var D="https://doi.org/", P=[
    {t:"Concept and requirements", q:"What can go wrong?", pos:[50,12,"top"],
-    w:"Before design, I analyse hazards. One source is reasonably foreseeable misuse of an automated driving function by the driver. A second source is the limits of the function itself, which the safety of the intended functionality (SOTIF) covers: hazards that arise without a fault.",
-    r:"Research gaps and a comparison of the methods that support SOTIF, from a systematic literature review. Test requirements and evaluation criteria for misuse scenarios.",
+    w:"Hazard analysis precedes design. Reasonably foreseeable misuse of an automated driving function by the driver is one hazard source. The limits of the function are a second hazard source. The safety of the intended functionality (SOTIF) covers hazards without a fault.",
+    r:"A systematic literature review identifies research gaps and compares the methods in support of SOTIF. A simulation study defines test requirements and evaluation criteria for misuse scenarios.",
     l:[["Systematic literature review",D+"10.4271/2025-01-5030"],["Mitigation of foreseeable misuse",D+"10.47953/sae-pp-00371"]]},
    {t:"Data and design", q:"Are the data fit for purpose?", pos:[79,30,"right"],
-    w:"An AI-based object detector depends on the data used to train and test it. I generate LiDAR (laser-based distance sensor) data in simulation, where each weather condition can be set and repeated.",
-    r:"A simulated LiDAR dataset with 21 weather conditions, with public code.",
+    w:"Training data and test data determine the behaviour of an AI-based object detector. Simulation generates LiDAR (laser-based distance sensor) data with defined, repeatable weather conditions.",
+    r:"A simulated LiDAR dataset with 21 weather conditions and public code.",
     l:[["Performance evaluation in simulation",D+"10.5220/0012707300003702"],["Code","https://github.com/milinpatel07/SOTIF-PCOD"]]},
    {t:"Verification and validation", q:"Are the targets met?", pos:[79,70,"right"],
-    w:"I test automated driving functions in simulation, and I evaluate the uncertainty of each detection of an AI-based object detector.",
-    r:"Disagreement between several detectors separates incorrect detections from correct ones. A statistical test checks whether a performance target still holds in a condition such as heavy rain.",
+    w:"Simulation tests automated driving functions. An ensemble of AI-based object detectors provides an uncertainty value for each detection.",
+    r:"Disagreement within the ensemble separates incorrect detections from correct detections. A statistical test checks the validity of a performance target in heavy rain.",
     l:[["Uncertainty evaluation",D+"10.5220/0014967200004030"],["Uncertainty representation",D+"10.1007/978-3-032-23187-1_10"],["Testing of foreseeable misuse",D+"10.1007/978-981-99-3043-2_15"],["Trajectory planning",D+"10.1109/ICECCME52200.2021.9591044"],["Explanation of the statistical test","https://milinpatel07.github.io/lidar-performance-target-applicability/story.html"]]},
    {t:"Release", q:"Is the case complete?", pos:[50,88,"bottom"],
-    w:"An assurance case is a structured argument, supported by evidence, that a system is acceptably safe. I combine the safety claims and the cybersecurity claims for an AI-based perception component in one assurance case.",
-    r:"At the verification and validation goal, the evidence types of the standards use different measurement scales, and no standard prescribes how they combine.",
+    w:"An assurance case is a structured argument, supported by evidence, for the acceptable safety of a system. The research combines the safety claims and the cybersecurity claims for an AI-based perception component in one assurance case.",
+    r:"At the verification and validation goal, the evidence types of the standards use different measurement scales. No standard prescribes a combination rule.",
     l:[["Assurance argument pattern",D+"10.1007/978-3-032-35506-5_55"],["Assurance case explorer","https://milinpatel07.github.io/Assurance-Gaps-in-an-Integrated-Safety-and-Cybersecurity-Case/"]]},
    {t:"Operation", q:"Does it hold in operation?", pos:[21,70,"left"],
-    w:"In operation, no ground truth is available. An anomaly in the perception output carries no label for its cause, which can be a performance insufficiency or an attack.",
-    r:"A position paper that states this gap at the level of the clauses of the standards and sets requirements for a method that resolves it.",
+    w:"Operation provides no ground truth. An anomaly in the perception output carries no label for the cause. The cause is a performance insufficiency or an attack.",
+    r:"A position paper shows the missing allocation of an anomaly to a cause in the clauses of the standards and sets requirements for a resolution method.",
     l:[["Position paper, listed under publications","{{ '/publications/' | relative_url }}"]]},
    {t:"Updates", q:"Does it hold after updates?", pos:[21,30,"left"],
-    w:"An update of an AI component can invalidate evidence that was produced for the earlier version. The question is part of my current research.",
+    w:"An update of an AI component can invalidate evidence from the earlier version. The validity of evidence after an update is part of the current research.",
     r:"No publication yet.",
     l:[]}
   ];
